@@ -19,10 +19,13 @@ button{font:inherit;font-weight:700;background:var(--acc);color:#12312f;border:0
 @media (orientation:portrait) and (pointer:coarse){#rot{display:flex}}
 .sec{background:transparent;color:#fff;border:2px solid #ffffff66}
 button small{display:block;font-size:11px;font-weight:600;opacity:.8}
-.scr{overflow:auto;align-items:safe center}
-.scr div{gap:9px;padding:8px 0}
+.scr{overflow:auto;align-items:safe center;padding:10px}
+.scr div{gap:6px;padding:0}
 .scr h1{font-size:28px}
 .scr .hint{font-size:13px;opacity:.75}
 #cd{font:inherit;font-weight:700;text-align:center;letter-spacing:3px;text-transform:uppercase;width:min(220px,70vw);min-height:46px;box-sizing:border-box;padding:10px;border-radius:12px;border:2px solid #ffffff66;background:#ffffff1a;color:#fff}
 #cd::placeholder{letter-spacing:0;text-transform:none;opacity:.65}
 #soon{color:var(--acc);font-weight:700}
+.scr .seg{flex-direction:row;flex-wrap:wrap;justify-content:center}
+.seg button{min-height:38px;padding:6px 12px;background:transparent;color:#fff;border:2px solid #ffffff55;font-size:14px}
+.seg button.on{background:var(--acc);color:#12312f;border-color:transparent}
