@@ -4,18 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Zona Final</title>
-<link rel="stylesheet" href="style.css?v=202611062051">
+<link rel="stylesheet" href="style.css?v=202611062102">
 </head>
 <body>
 <canvas id="c"></canvas>
 <div id="hud"><span id="al">Vivos 20</span><span id="kl">Abates 0</span><span id="wp">Pistola</span><span id="zn">Zona em 20s</span></div>
+<button id="pk" hidden><canvas id="pi" width="128" height="80"></canvas><b id="pn"></b><small>Trocar</small></button>
 <div id="fd"></div>
 <div id="ap"><i id="af"></i></div>
 <div id="hp"><i id="hf"></i></div>
 <div id="ov" hidden><div><h1 id="t">Zona Final</h1><p id="m">Sobreviva a 19 bots e fique dentro do círculo branco: a área rosa causa dano. No PC, WASD move e o mouse mira e atira. No celular, jogue deitado: o joystick esquerdo move e o direito mira e atira.</p><button id="go">Jogar de novo</button><button id="mn" class="sec">Menu</button></div></div>
-<div id="menu" class="scr"><div><h1>Zona Final</h1><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button><button id="snd">🔊</button></div><button id="off">Jogar offline</button><button id="onl" class="sec">Jogar online<small>Em breve</small></button><p class="hint">PC: WASD move, mouse mira e atira. Celular: jogue deitado; o joystick esquerdo move e o direito mira e atira.</p><p class="hint" id="rc"></p></div></div>
+<div id="menu" class="scr"><div><h1>Zona Final</h1><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button><button id="snd">🔊</button></div><button id="off">Jogar offline</button><button id="onl" class="sec">Jogar online<small>Em breve</small></button><p class="hint">PC: WASD move, mouse mira e atira, E troca de arma. Celular: jogue deitado; o joystick esquerdo move e o direito mira e atira. Perto de uma arma, toque no ícone dela (abaixo do minimapa) para trocar.</p><p class="hint" id="rc"></p></div></div>
 <div id="room" class="scr" hidden><div><h1>Jogar online</h1><p>Jogue com amigos em uma sala privada.</p><button id="mk">Criar sala</button><input id="cd" placeholder="Código da sala" maxlength="6" autocomplete="off" autocapitalize="characters"><button id="jn" class="sec">Entrar na sala</button><p id="soon" hidden>Em breve! As salas online ainda estão em desenvolvimento.</p><button id="bk" class="sec">Voltar</button></div></div>
 <div id="rot"><i>📱</i>Gire o celular para jogar deitado</div>
-<script src="game.js?v=202611062051"></script>
+<script src="game.js?v=202611062102"></script>
 </body>
 </html>
