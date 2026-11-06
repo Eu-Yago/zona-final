@@ -29,3 +29,9 @@ button small{display:block;font-size:11px;font-weight:600;opacity:.8}
 .scr .seg{flex-direction:row;flex-wrap:wrap;justify-content:center}
 .seg button{min-height:38px;padding:6px 12px;background:transparent;color:#fff;border:2px solid #ffffff55;font-size:14px}
 .seg button.on{background:var(--acc);color:#12312f;border-color:transparent}
+#ap{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(30px + env(safe-area-inset-bottom,0px));width:min(260px,60vw);height:8px;border-radius:99px;background:#0b2a3399;overflow:hidden;pointer-events:none}
+#af{display:block;height:100%;width:0;background:#4cc9f0}
+#fd{position:fixed;left:calc(10px + env(safe-area-inset-left,0px));top:calc(46px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:4px;pointer-events:none;color:#fff;font-size:13px;font-weight:700}
+#fd div{background:#0b2a33a8;padding:4px 10px;border-radius:8px;width:fit-content;animation:fi .2s}
+#fd .me{background:#ffb703;color:#12312f}
+@keyframes fi{from{opacity:0;transform:translateX(-10px)}}
