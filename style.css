@@ -39,3 +39,12 @@ button small{display:block;font-size:11px;font-weight:600;opacity:.8}
 #pk canvas{width:64px;height:40px}
 #pk small{font-size:10px;opacity:.8;font-weight:600}
 @keyframes pp{to{box-shadow:0 0 0 4px #ffb70055}}
+#menu>div,#cust>div{max-width:680px;flex-direction:row;gap:22px}
+.col{flex:1;min-width:0}
+.inp{font:inherit;font-weight:700;text-align:center;width:180px;min-height:42px;box-sizing:border-box;padding:8px;border-radius:12px;border:2px solid #ffffff66;background:#ffffff1a;color:#fff}
+.sw{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.sq{width:34px;height:34px;min-height:0;padding:0;border-radius:50%;border:3px solid #ffffff55}
+.sq.on{border-color:#fff;box-shadow:0 0 0 3px var(--acc)}
+#pv{width:120px;height:120px;background:#ffffff14;border-radius:16px}
+#tp{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(46px + env(safe-area-inset-bottom,0px));max-width:min(520px,86vw);background:#0b2a33e6;border:2px solid #ffb703;color:#fff;padding:8px 14px;border-radius:12px;font-weight:700;font-size:14px;text-align:center;pointer-events:none}
+@media (max-width:640px){#menu>div,#cust>div{flex-direction:column}}
