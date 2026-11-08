@@ -190,6 +190,11 @@ $('cs').onclick=()=>{sv.cn=$('nm').value.trim().slice(0,10);save();show('menu')}
 document.querySelectorAll('#mds [data-m]').forEach(b=>b.onclick=()=>{sv.md=+b.dataset.m;save();menuUI()});
 $('tut').onclick=()=>{sv.tu=0;save();$('go').onclick()};
 $('eb').onclick=()=>{$('er').hidden=1;show('menu')};
+let dip=null;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dip=e;$('ins').hidden=0});
+addEventListener('appinstalled',()=>{dip=null;$('ins').hidden=1});
+$('ins').onclick=()=>{if(!dip)return;dip.prompt();dip.userChoice.then(()=>{dip=null;$('ins').hidden=1},()=>{})};
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')==0)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 $('mk').onclick=sn;$('jn').onclick=sn;
 document.querySelectorAll('#dfs [data-d]').forEach(b=>b.onclick=()=>{sv.d=+b.dataset.d;save();menuUI()});
 $('snd').onclick=()=>{unlock();sv.m=sv.m?0:1;save();menuUI();snd(660,.1,'triangle',.06)};
