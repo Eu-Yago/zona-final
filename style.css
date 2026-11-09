@@ -53,3 +53,6 @@ button small{display:block;font-size:11px;font-weight:600;opacity:.8}
 .scr .sw{flex-direction:row;flex-wrap:wrap;justify-content:center}
 .scr .brand{flex-direction:row;gap:12px}
 .brand img{border-radius:14px;display:block}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:none;pointer-events:none}
+#fb{position:fixed;right:calc(30px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:84px;height:84px;min-height:0;padding:0;border-radius:50%;background:#e63946d9;border:4px solid #fff;color:#fff;font-weight:800;font-size:15px;touch-action:none;z-index:2}
+.v3 #pk{top:auto;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:calc(130px + env(safe-area-inset-right,0px))}
