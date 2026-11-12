@@ -12,25 +12,36 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Zona Final">
-<link rel="stylesheet" href="style.css?v=202611090752">
+<link rel="stylesheet" href="style.css?v=202611120232">
 </head>
 <body>
 <canvas id="gl"></canvas>
 <canvas id="c"></canvas>
-<div id="hud"><span id="al">Vivos 20</span><span id="kl">Abates 0</span><span id="wp">Pistola</span><span id="zn">Zona em 20s</span></div>
+<div id="hud"><span id="al">👥 20</span><span id="kl">☠ 0</span><span id="zn">Zona em 20s</span></div>
+<button id="pz" hidden>⏸</button>
 <div id="tp" hidden></div>
 <button id="pk" hidden><canvas id="pi" width="128" height="80"></canvas><b id="pn"></b><small>Trocar</small></button>
 <div id="fd"></div>
 <div id="ap"><i id="af"></i></div>
 <div id="hp"><i id="hf"></i></div>
 <button id="fb" hidden>FOGO</button>
-<div id="ov" hidden><div><h1 id="t">Zona Final</h1><p id="m">Sobreviva a 19 bots e fique dentro do círculo branco: a área rosa causa dano.</p><button id="go">Jogar de novo</button><button id="mn" class="sec">Menu</button></div></div>
-<div id="menu" class="scr"><div><div class="col"><div class="brand"><img src="icon-192.png" width="64" height="64" alt=""><h1>Zona Final</h1></div><p class="hint">PC: WASD move, mouse mira e atira, E troca de arma. Celular: jogue deitado; o joystick esquerdo move; no 2D o direito mira e atira, no 3D arraste o lado direito para olhar e toque em FOGO. Perto de uma arma, toque no ícone dela (abaixo do minimapa) para trocar.</p><p class="hint" id="rc"></p><button id="ins" class="sec" hidden>Instalar app</button><p class="hint" id="vr">versão 202611090752</p></div><div class="col"><div class="seg" id="vws"><button data-v="0">2D</button><button data-v="1">3D</button></div><div class="seg" id="mds"><button data-m="0">Solo</button><button data-m="1">Duplas</button></div><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button><button id="snd">🔊</button></div><button id="off">Jogar offline</button><button id="onl" class="sec">Jogar online<small>Em breve</small></button><div class="seg"><button id="cus">Personalizar</button><button id="tut">Tutorial</button></div></div></div></div>
-<div id="cust" class="scr" hidden><div><div class="col"><h1>Personalizar</h1><canvas id="pv" width="120" height="120"></canvas><input id="nm" class="inp" placeholder="Seu nome" maxlength="10" autocomplete="off"></div><div class="col"><p>Cor da roupa</p><div class="sw" id="cbody"></div><p>Cor do boné</p><div class="sw" id="ccap"></div><button id="cs">Salvar</button></div></div></div>
-<div id="room" class="scr" hidden><div><h1>Jogar online</h1><p>Jogue com amigos em uma sala privada.</p><button id="mk">Criar sala</button><input id="cd" placeholder="Código da sala" maxlength="6" autocomplete="off" autocapitalize="characters"><button id="jn" class="sec">Entrar na sala</button><p id="soon" hidden>Em breve! As salas online ainda estão em desenvolvimento.</p><button id="bk" class="sec">Voltar</button></div></div>
+<button id="jb" hidden>⤒</button>
+<button id="rb" hidden>↻</button>
+<div id="ps" hidden><div><h2>Pausado</h2><button id="rs">Continuar</button><button id="lv" class="sec">Sair para o lobby</button></div></div>
+<div id="ov" hidden><div><h1 id="t">Zona Final</h1><p id="m"></p><p id="xg"></p><button id="go">Jogar de novo</button><button id="mn" class="sec">Lobby</button></div></div>
+<div id="menu">
+<div class="pcard"><img src="icon-192.png" width="48" height="48" alt=""><div><b id="pnm">Jogador</b><div class="xp"><i id="pxp"></i></div><small id="plv">Nível 1</small></div></div>
+<div class="ttl">ZONA <span>FINAL</span></div>
+<div class="tr"><button id="snd">🔊</button><button id="ins" hidden>⤓ Instalar</button></div>
+<div class="lcol"><button id="cus">👕 Personalizar</button><button id="tut">❓ Tutorial</button><button id="onl" class="sec">🌐 Online<small>Em breve</small></button></div>
+<div class="rpan"><div class="seg" id="mds"><button data-m="0">Solo</button><button data-m="1">Duplas</button></div><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button></div><button id="off">JOGAR</button></div>
+<div class="bl"><span id="rc"></span> · <span id="vr">versão 202611120232</span></div>
+</div>
+<div id="cust" hidden><div><h3>Personalizar</h3><input id="nm" class="inp" placeholder="Seu nome" maxlength="10" autocomplete="off"><p>Estilo</p><div class="seg" id="hsw"><button data-s="0">Boné</button><button data-s="1">Capacete</button><button data-s="2">Cabelo</button><button data-s="3">Gorro</button></div><p>Cor da roupa</p><div class="sw" id="cbody"></div><p>Cor do chapéu</p><div class="sw" id="ccap"></div><button id="cs">Salvar</button></div></div>
+<div id="room" hidden><div><h2>Jogar online</h2><p>Jogue com amigos em uma sala privada.</p><button id="mk">Criar sala</button><input id="cd" class="inp" placeholder="Código da sala" maxlength="6" autocomplete="off" autocapitalize="characters"><button id="jn" class="sec">Entrar na sala</button><p id="soon" hidden>Em breve! As salas online ainda estão em desenvolvimento.</p><button id="bk" class="sec">Voltar</button></div></div>
 <div id="er" hidden><b>Ops, o jogo encontrou um erro</b><span id="et"></span><button id="eb">Voltar ao menu</button></div>
 <div id="rot"><i>📱</i>Gire o celular para jogar deitado</div>
-<script src="game.js?v=202611090752"></script>
-<script src="game3d.js?v=202611090752"></script>
+<script src="game.js?v=202611120232"></script>
+<script src="game3d.js?v=202611120232"></script>
 </body>
 </html>
