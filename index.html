@@ -12,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Zona Final">
-<link rel="stylesheet" href="style.css?v=202611120232">
+<link rel="stylesheet" href="style.css?v=202611172008">
 </head>
 <body>
 <canvas id="gl"></canvas>
@@ -24,24 +24,41 @@
 <div id="fd"></div>
 <div id="ap"><i id="af"></i></div>
 <div id="hp"><i id="hf"></i></div>
-<button id="fb" hidden>FOGO</button>
-<button id="jb" hidden>⤒</button>
-<button id="rb" hidden>↻</button>
+<button id="fl" class="hb" hidden>FOGO</button>
+<button id="fb" class="hb" hidden>FOGO</button>
+<button id="jb" class="hb" hidden>⤒</button>
+<button id="sb" class="hb" hidden>◎</button>
+<button id="rb" class="hb" hidden>↻</button>
+<button id="cb" class="hb" hidden>▼</button>
+<button id="pb" class="hb" hidden>▬</button>
+<button id="ab" class="hb" hidden><span id="abn">✚</span></button>
 <div id="ps" hidden><div><h2>Pausado</h2><button id="rs">Continuar</button><button id="lv" class="sec">Sair para o lobby</button></div></div>
 <div id="ov" hidden><div><h1 id="t">Zona Final</h1><p id="m"></p><p id="xg"></p><button id="go">Jogar de novo</button><button id="mn" class="sec">Lobby</button></div></div>
 <div id="menu">
-<div class="pcard"><img src="icon-192.png" width="48" height="48" alt=""><div><b id="pnm">Jogador</b><div class="xp"><i id="pxp"></i></div><small id="plv">Nível 1</small></div></div>
+<div class="pcard"><img src="icon-192.png" width="48" height="48" alt=""><div><b id="pnm">Jogador</b><div class="xp"><i id="pxp"></i></div><small id="plv">Nível 1</small><small id="pch"></small></div></div>
 <div class="ttl">ZONA <span>FINAL</span></div>
-<div class="tr"><button id="snd">🔊</button><button id="ins" hidden>⤓ Instalar</button></div>
-<div class="lcol"><button id="cus">👕 Personalizar</button><button id="tut">❓ Tutorial</button><button id="onl" class="sec">🌐 Online<small>Em breve</small></button></div>
-<div class="rpan"><div class="seg" id="mds"><button data-m="0">Solo</button><button data-m="1">Duplas</button></div><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button></div><button id="off">JOGAR</button></div>
-<div class="bl"><span id="rc"></span> · <span id="vr">versão 202611120232</span></div>
+<div class="tr"><button id="cfb">⚙</button><button id="snd">🔊</button><button id="ins" hidden>⤓ Instalar</button></div>
+<div class="lcol"><button id="chb">🎭 Personagem</button><button id="cus">👕 Personalizar</button><button id="tut">❓ Tutorial</button><button id="onl" class="sec">🌐 Online<small>Em breve</small></button></div>
+<div class="rpan"><div class="seg" id="mds"><button data-m="0">Solo</button><button data-m="1">Duplas</button><button data-m="2">Esquadrão</button></div><div class="seg" id="dfs"><button data-d="0">Fácil</button><button data-d="1">Normal</button><button data-d="2">Difícil</button></div><button id="off">JOGAR</button></div>
+<div class="bl"><span id="rc"></span> · <span id="vr">versão 202611172008</span></div>
 </div>
-<div id="cust" hidden><div><h3>Personalizar</h3><input id="nm" class="inp" placeholder="Seu nome" maxlength="10" autocomplete="off"><p>Estilo</p><div class="seg" id="hsw"><button data-s="0">Boné</button><button data-s="1">Capacete</button><button data-s="2">Cabelo</button><button data-s="3">Gorro</button></div><p>Cor da roupa</p><div class="sw" id="cbody"></div><p>Cor do chapéu</p><div class="sw" id="ccap"></div><button id="cs">Salvar</button></div></div>
+<div id="cust" hidden><div><h3>Personalizar</h3><input id="nm" class="inp" placeholder="Seu nome" maxlength="10" autocomplete="off"><p>Estilo do chapéu</p><div class="seg" id="hsw"><button data-s="0">Boné</button><button data-s="1">Capacete</button><button data-s="2">Cabelo</button><button data-s="3">Gorro</button></div><p>Cor da roupa</p><div class="sw" id="cbody"></div><p>Cor do chapéu</p><div class="sw" id="ccap"></div><p>Capa</p><div class="seg" id="cpw"><button data-c="0">Sem</button><button data-c="1">Curta</button><button data-c="2">Longa</button></div><p>Cor da capa</p><div class="sw" id="cpc"></div><button id="cdf" class="sec">Usar o visual do personagem</button><button id="cs">Salvar</button></div></div>
+<div id="chs" hidden><div><h3>Personagens</h3><div id="chl"></div><div id="chd"></div><button id="chx">Fechar</button></div></div>
+<div id="cfg" hidden><div><h3>Configurações</h3>
+<label>Sensibilidade da câmera <b id="v_ss"></b><input type="range" id="s_ss" min="0.4" max="2.2" step="0.05"></label>
+<label>Sensibilidade da mira (zoom) <b id="v_sa"></b><input type="range" id="s_sa" min="0.2" max="1.4" step="0.05"></label>
+<label>Sensibilidade da sniper <b id="v_sn"></b><input type="range" id="s_sn" min="0.1" max="1" step="0.05"></label>
+<label class="chk"><input type="checkbox" id="s_si"> Inverter o eixo vertical</label>
+<label class="chk"><input type="checkbox" id="s_aa"> Mira assistida</label>
+<label class="chk"><input type="checkbox" id="s_lf"> Botão de tiro também à esquerda</label>
+<label>Tamanho dos botões <b id="v_ui"></b><input type="range" id="s_ui" min="0.7" max="1.4" step="0.05"></label>
+<label>Transparência dos botões <b id="v_uo"></b><input type="range" id="s_uo" min="0.3" max="1" step="0.05"></label>
+<button id="hdb" class="sec">🎛 Personalizar HUD</button><button id="cfx">Salvar e fechar</button></div></div>
+<div id="hed" hidden><div><b id="hen">Toque num botão e arraste</b><label>Tamanho <input type="range" id="h_s" min="0.6" max="1.8" step="0.05"></label><label>Transparência <input type="range" id="h_o" min="0.3" max="1" step="0.05"></label><button id="h_r" class="sec">Padrão</button><button id="h_c" class="sec">Cancelar</button><button id="h_ok">Salvar</button></div></div>
 <div id="room" hidden><div><h2>Jogar online</h2><p>Jogue com amigos em uma sala privada.</p><button id="mk">Criar sala</button><input id="cd" class="inp" placeholder="Código da sala" maxlength="6" autocomplete="off" autocapitalize="characters"><button id="jn" class="sec">Entrar na sala</button><p id="soon" hidden>Em breve! As salas online ainda estão em desenvolvimento.</p><button id="bk" class="sec">Voltar</button></div></div>
 <div id="er" hidden><b>Ops, o jogo encontrou um erro</b><span id="et"></span><button id="eb">Voltar ao menu</button></div>
 <div id="rot"><i>📱</i>Gire o celular para jogar deitado</div>
-<script src="game.js?v=202611120232"></script>
-<script src="game3d.js?v=202611120232"></script>
+<script src="game.js?v=202611172008"></script>
+<script src="game3d.js?v=202611172008"></script>
 </body>
 </html>
